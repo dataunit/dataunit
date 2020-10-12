@@ -6,8 +6,8 @@ import subprocess
 
 class ExecuteShellCommand(DataUnitCommand):
     """
-    Class for the command that executes a specified SQL statement without a return value; meant to be used for DML
-    and DDL like TRUNCATE TABLE, INSERT, UPDATE, etc.
+    Class for the command that executes a specified shell statement without a return value; used to show a 
+    working dataunit command without any dependencies
     """
     command_name = "Execute Shell Command"
 
@@ -20,7 +20,7 @@ class ExecuteShellCommand(DataUnitCommand):
 
     def run(self, context: Context) -> str:
         """
-        Executes the SQL statement specified in the workbook for the test command with no return value
+        Executes the shell statement specified in the workbook for the test command with no return value
 
         :param context:
         :return:
@@ -29,6 +29,7 @@ class ExecuteShellCommand(DataUnitCommand):
 
         # Execute shell command
         output = subprocess.run(self.command, shell=True, check=True, capture_output=True).stdout.decode("utf-8")
+        print(output)
 
         return output
 
