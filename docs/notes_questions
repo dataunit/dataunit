@@ -1,0 +1,7 @@
+DataUnit discussion topics:
+1. How do we want to handle logging (and other config variables)?
+	- Config.py file with the logging dictionary in it?
+	- Separate class and methods for logging?
+2. For LoadSheetToTable:
+	- Should there be separate classes (or methods within the same class) for truncating the table vs. dropping and recreating it?
+3. Do we need a separate test command for cleaning up after our tests, or would we open a database transaction at a higher level than the individual command, not commit it, and roll it back only once the full test case is finished?
