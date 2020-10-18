@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+env/
+
+# Cache
+__pycache__/
+*.pyc
+
+# Package stuff
+dist/
+*.egg-info
+
+# Pycharm Project Files
+.idea/
+#.idea/workspace.xml
+#.idea/tasks.xml
+
+# VS Code Files
+.vscode/
+
+# mac os generated files
+.DS_Store
