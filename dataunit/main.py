@@ -2,7 +2,7 @@ from argparse import ArgumentParser
 from unittest.runner import TextTestRunner
 
 from dataunit.excel.loader import ExcelTestLoader
-
+from dataunit.excel.validator import validate_workbook
 
 def parse_args(argv: list):
     parser = ArgumentParser()
@@ -12,6 +12,8 @@ def parse_args(argv: list):
 
 
 def main(excel_workbook_name):
+    validate_workbook(excel_workbook_name)
+    
     loader = ExcelTestLoader()
     tests = loader.load_tests_from_workbook(excel_workbook_name)
     test_runner = TextTestRunner(verbosity=1,
