@@ -1,9 +1,6 @@
 import xlrd
 
-REQUIRED_SHEETS = ['Tests', 'Settings']
-REQUIRED_COLUMNS = {'Tests': ['Test Name', 'Active', 'Test Commands Worksheet'],
-                    'Settings': ['Setting Name', 'Setting Value']}
-
+from dataunit.excel.constants import REQUIRED_COLUMNS, REQUIRED_SHEETS
 
 def validate_workbook(workbook_name):
     # validates a test workbook for the correct sheets and sheet contents
