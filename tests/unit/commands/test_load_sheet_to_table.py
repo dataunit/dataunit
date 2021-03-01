@@ -30,9 +30,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         schema = "dbo"
         table = "Diet_Log"
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "{}.{}".format(schema, table), connection_string
@@ -70,9 +70,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         schema = "dbo"
         table = "Diet_Log"
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "{}.{}".format(schema, table), connection_string
@@ -105,9 +105,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         schema = "dbo"
         table = "Diet_Log"
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "{}.{}".format(schema, table), connection_string
@@ -131,9 +131,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         schema = "dbo"
         table = "Diet_Log"
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "{}.{}".format(schema, table), connection_string
@@ -158,9 +158,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         """
         # Inputs
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "dbo.Diet_Log", connection_string
@@ -189,9 +189,9 @@ class LoadSheetToTableTestCommand(unittest.TestCase):
         """
         # Inputs
         connection_string = "${DB_CONNECTION}"
-        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_workbook.xlsx"))
+        workbook = xlrd.open_workbook(os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx"))
         command = ls.LoadSheetToTableCommand(
-            os.path.join(self.test_dir, "test_workbook.xlsx")
+            os.path.join(self.test_dir, "test_load_sheet_to_table.xlsx")
             , workbook
             , {"DB_CONNECTION": "DRIVER={SQL Server};SERVER=localhost;DATABASE=FakeDB;Trusted_Connection=yes;"}
             , "Diet_Log_1", "dbo.Diet_Log", connection_string
