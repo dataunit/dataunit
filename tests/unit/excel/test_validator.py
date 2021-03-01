@@ -29,7 +29,11 @@ class TestValidator(unittest.TestCase):
             test_workbook = tmpdirname + "/empty_workbook.xlsx"            
             workbook.save(test_workbook)  
 
-            validate_workbook(test_workbook)
+            #Note: there is no assertion here as this should be valid
+            try:
+                validate_workbook(test_workbook)
+            except:
+                self.fail('Method call should not raise exception.')
 
 
     def test_validation_with_empty_workbook(self):
