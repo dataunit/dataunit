@@ -25,8 +25,19 @@ class AssertDatasetsEqualCommand(DataUnitCommand):
         :param context:
         :return:
         """
-        pass
+        
+        if self.expected_dataset_type.upper() == "WORKSHEET":
+
+            #df = get_dataframe_from_worksheet(self.workbook, self.expected_dataset)
+            pass
+        else if self.expected_dataset_type.upper() == "RESULTSET":
+            
+            df = Context[self.expected_dataset]
+            
         #TODO get the expected and actual datasets at pandas dataframes and then compare them using pandas equal
         #TODO will need a helper method to load the pandas from worksheet
         
+
+    
+
 
