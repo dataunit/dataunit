@@ -7,5 +7,7 @@ def get_dataframe_from_worksheet(workbook, worksheet_name):
 
 
 if __name__ == "__main__":
-
-    get_dataframe_from_worksheet()
+    #TODO Load workbook as xlrd
+    workbook = None
+    worksheet_name = "TEST_DATASET_1"
+    get_dataframe_from_worksheet(workbook, worksheet_name)
