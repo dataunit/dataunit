@@ -2,7 +2,7 @@ import pandas as pd
 
 def get_dataframe_from_worksheet(workbook, worksheet_name):
     """returns a pandas dataframe from an excel worksheet"""
-    return pd.read_excel(workbook, sheet_name=worksheet_name)
+    return pd.read_excel(workbook, sheet_name=worksheet_name, dtype=str)
     
 
 
