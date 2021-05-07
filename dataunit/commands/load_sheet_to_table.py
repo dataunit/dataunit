@@ -33,6 +33,9 @@ class LoadSheetToTableCommand(DataUnitCommand):
         :param context:
         :return:
         """
+        #TODO: Add pyodbc connection object to context variable only if self.data_source_connection_string is different from what's already there
+        #context["db_conn"] = 
+
         # Make SQL statements to truncate the table
         #table_statements = self._drop_and_create_statements(self.data.columns)
         table_statements = self._truncate_statements
