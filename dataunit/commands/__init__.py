@@ -4,6 +4,7 @@ from dataunit.commands.execute_sql import ExecuteSQLCommand
 from dataunit.commands.execute_shell_command import ExecuteShellCommand
 from dataunit.commands.execute_sql_with_resultset import ExecuteSQLWithResultsetCommand
 from dataunit.commands.assert_datasets_equal import AssertDatasetsEqualCommand
+from dataunit.commands.assert_recordcounts_equal import AssertRecordCountsEqualCommand
 
 commands = {
     DummyCommand.command_name: DummyCommand,
@@ -11,5 +12,6 @@ commands = {
     ExecuteSQLCommand.command_name: ExecuteSQLCommand,
     ExecuteShellCommand.command_name: ExecuteShellCommand,
     ExecuteSQLWithResultsetCommand.command_name: ExecuteSQLWithResultsetCommand,
-    AssertDatasetsEqualCommand.command_name: AssertDatasetsEqualCommand
+    AssertDatasetsEqualCommand.command_name: AssertDatasetsEqualCommand,
+    AssertRecordCountsEqualCommand.command_name: AssertRecordCountsEqualCommand
 }
