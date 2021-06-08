@@ -18,15 +18,15 @@ CONSTRAINT pk_user_profile PRIMARY KEY (Profile_Id)
 )
 
 Create table dbo.Diet_Log(
-Diet_Log_Id int,
+Diet_Log_Id INTEGER,
 Profile_Id int,
 Log_Date datetime,
 Meal varchar(50),
 Food_Name varchar(50),
 Calorie_Per_Unit int,
 Quantity int,
-CONSTRAINT pk_diet_log PRIMARY KEY (Diet_Log_Id),
-CONSTRAINT fk_diet_log_profile_id FOREIGN KEY (Profile_Id) REFERENCES User_Profile(Profile_Id)
+CONSTRAINT pk_diet_log PRIMARY KEY (Diet_Log_Id)
+--,CONSTRAINT fk_diet_log_profile_id FOREIGN KEY (Profile_Id) REFERENCES User_Profile(Profile_Id)
 )
 
 Create table dbo.Exercise_Log(
@@ -37,7 +37,7 @@ Exercise_Name varchar(50),
 Calories_Burned int,
 Description varchar(255)
 CONSTRAINT pk_exercise_log PRIMARY KEY (Exercise_Id),
-CONSTRAINT fk_exercise_log_profile_id FOREIGN KEY (Profile_Id) REFERENCES User_Profile(Profile_Id)
+--CONSTRAINT fk_exercise_log_profile_id FOREIGN KEY (Profile_Id) REFERENCES User_Profile(Profile_Id)
 )
 
 --Delete from dbo.Exercise_Log
@@ -172,4 +172,20 @@ Join
 ) de on u.Profile_Id = de.Profile_Id
 ')
 
-Select * from dbo.Daily_Goal_Review
+--Select * from dbo.Daily_Goal_Review
+
+--Create view for testing "Assert Datasets Equal" command
+CREATE VIEW dbo.Diet_Log_Profile_Test AS
+SELECT 
+	dl.[Log_Date]
+	,dl.[Meal]
+	,dl.[Food_Name]
+	,dl.[Calorie_Per_Unit]
+	,dl.[Quantity]
+	,up.First_Name
+	,up.Last_Name
+FROM [MyFitBot].[dbo].[Diet_Log] dl
+INNER JOIN MyFitBot.dbo.User_Profile up
+	ON up.Profile_Id = dl.Profile_Id
+--WHERE up.First_Name = 'Christel' AND up.Last_Name = 'Russen'
+;
